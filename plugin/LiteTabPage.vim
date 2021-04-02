@@ -5,7 +5,7 @@
 "
 " Description:
 "
-" This is an (extremely) simple plugin, which makes VIM Tab Page functions more user-friendly. 
+" This is an (extremely) simple plugin, which makes VIM Tab Page functions more user-friendly.
 "
 " <> Features:
 " 1. ":E filename"			Open the file in a new tab page instead of in current window.
@@ -77,4 +77,3 @@ function! LiteTabLabel()
 endfunction
 
 set guitablabel=%{LiteTabLabel()}
-
