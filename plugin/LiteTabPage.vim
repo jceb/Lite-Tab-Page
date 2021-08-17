@@ -49,6 +49,13 @@ nnoremap <unique> <A-h> gT
 nnoremap <unique> <A-l> gt
 nnoremap <silent> <A-H> :call <SID>LiteTabMove(-2)<CR>
 nnoremap <silent> <A-L> :call <SID>LiteTabMove(1)<CR>
+nnoremap <silent> <unique> <A-p> :exec 'tabnext '.(exists('g:litetabpage_previous') ? g:litetabpage_previous : 1)<CR>
+
+let g:litetabpage_previous = 1
+augroup litetabpage
+      au!
+      au TabLeave * :let g:litetabpage_previous = tabpagenr()
+augroup END
 
 function! s:LiteTabMove(idx)
 	let index = tabpagenr() + a:idx
