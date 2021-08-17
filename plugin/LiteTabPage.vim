@@ -34,8 +34,6 @@ let loaded_litetabpage = 1
 
 set winaltkeys=no
 
-com! -nargs=* -complete=file E tabnew <args>
-
 nnoremap <unique> <A-1> 1gt
 nnoremap <unique> <A-2> 2gt
 nnoremap <unique> <A-3> 3gt
